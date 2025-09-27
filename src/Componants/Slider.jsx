@@ -84,28 +84,35 @@ import offer from './Video/best-offer.mp4'
 import dis10 from './Video/sales.mp4'
 import dis2 from './Video/sale.mp4'
 import '../assets/Slider.css';
+import { Navigate, useNavigate } from "react-router-dom";
 
 const slides = [
   {
     image: photost,
     title: "Click And Take Photo 2 Minut",
-    video: offer
+    video: offer,
+    nvgt:"/photost"
   },
   {
     image: printer,
     title: "PDF PRINT / PHOTO COPY....",
-    video: dis2
+    video: dis2,
+    nvgt:"/print"
   },
   {
     image: schol,
     title: "Technology Time SCHOLARSHIP",
-    video: dis10
+    video: dis10,
+    nvgt:"/Upscholar"
   }
 ];
 
-const Slider = () => {
-  const [current, setCurrent] = useState(0);
 
+const Slider = () => {
+  
+  const [current, setCurrent] = useState(0);
+// NAVIGATION 
+const naigate=useNavigate()
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % slides.length);
   };
@@ -129,8 +136,8 @@ const Slider = () => {
 
         {/* Content Section - Middle */}
         <div className="content-section">
-          <h2 className="slider-titl    mt-2.5 text-2xl">{slides[current].title}</h2>
-          <button className="action-butto bg-amber-500  py-1 px-6 rounded-4xl">
+          <h2 className="slider-titl    mt-2.5 text-2xl text-shadow-black">{slides[current].title}</h2>
+          <button onClick={()=>naigate(slides[current].nvgt)}  className="action-butto bg-amber-500  py-1 px-6 rounded-4xl">
             Click
           </button>
         </div>

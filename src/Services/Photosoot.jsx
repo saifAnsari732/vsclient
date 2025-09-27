@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const Photosoot = () => {
+const Photosoot = () => {
   return (
     <div>Photosoot</div>
   )
 }
+
+export default Photosoot

@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import imglogo from '../Image/logo copy.png'
 import { useNavigate } from 'react-router-dom';
+import { IoLogoInstagram } from "react-icons/io";
+import { TiSocialFacebookCircular } from "react-icons/ti"
+import { CiLinkedin } from "react-icons/ci";
+import { CiTwitter } from "react-icons/ci";
 export default function VsDigitalLogin() {
     // NAVIGATION
 const navigate=useNavigate()
@@ -22,7 +26,7 @@ const handlelogin=()=>{
         <img
           src={imglogo}
           alt="VS Digital Solution Logo"
-          className="drop-shadow-lg h-[500px] lg:w-[700px]"
+          className="drop-shadow-lg h-[350px] lg:h-[500px] lg:w-[700px]"
         />
       </div>
       <div className="w-full md:w-[420px] bg-[#19A779] lg:bg-gradient-to-r from-teal-900  to-black lg:h-screen lg:w-[800px] lg: lg:justify-end lg:ml-80  rounded-t-3xl py-16 px-5 flex flex-col items-center">
@@ -33,7 +37,7 @@ const handlelogin=()=>{
           <input
           value={name}
           onChange={(e)=>setName(e.target.value)}
-            className="w-full px-5 py-4 rounded-lg border outline-none text-gray-700 bg-white placeholder-gray-400 shadow"
+            className="w-full px-5 py-4 text-3xl lg:text-5xl lg:py-3 rounded-lg border outline-none  bg-blue-200 text-black shadow"
             type="text"
             placeholder="Enter your name"
           />
@@ -43,10 +47,10 @@ const handlelogin=()=>{
         </button>
         <div className="text-white my-2">Connect with us</div>
         <div className="flex gap-6 mt-2 mb-4">
-          <a href="#"><img alt="Facebook" className="w-10 h-10 rounded-full bg-[#3b5998] p-2" src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/facebook.svg" /></a>
-          <a href="#"><img alt="Twitter" className="w-10 h-10 rounded-full bg-[#1DA1F2] p-2" src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/twitter.svg" /></a>
-          <a href="#"><img alt="Instagram" className="w-10 h-10 rounded-full bg-[#C13584] p-2" src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/instagram.svg" /></a>
-          <a href="#"><img alt="LinkedIn" className="w-10 h-10 rounded-full bg-[#0077B5] p-2" src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/linkedin.svg" /></a>
+          <a href="#"><IoLogoInstagram className='text-4xl rounded-4xl text-red-600 bg-amber-100 p-1'/></a>
+          <a href="#"><TiSocialFacebookCircular className='text-4xl rounded-4xl text-blue-200 bg-[#0084ff] p-1'/></a>
+          <a href="#"><CiTwitter className='text-4xl rounded-4xl bg-[#00ACEE]  p-1'/></a>
+          <a href="https://www.instagram.com/vikas_yaduvanshi_96/"><CiLinkedin className='text-4xl rounded-4xl text-[#02afff] bg-[#284fa3] p-1'/></a>
         </div>
       </div>
       </div>

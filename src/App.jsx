@@ -7,6 +7,10 @@ import VsDigitalLogin from './Componants/Login'
 import Upscholar from './Services/Upscholar'
 import { Banking } from './Services/Banking'
 import Slider from './Componants/Slider'
+import Photosoot from './Services/Photosoot'
+import Pan from './Services/Pan'
+import Aadhar from './Services/Aadhar'
+import PrintOut from './Services/PrintOut'
 const App = () => {
   return (
     <>
@@ -18,6 +22,10 @@ const App = () => {
       <Route path='/Upscholar' element={<Upscholar/>}/>
       <Route path='/Banking' element={<Banking/>} />
       <Route path='/slider' element={<Slider/>}/>
+      <Route path='/photost' element={<Photosoot/>}/>
+      <Route path='/pan' element={<Pan/>}/>
+      <Route path='/aadhar' element={<Aadhar/>}/>
+      <Route path='/print' element={<PrintOut/>}/>
     </Routes>
     </BrowserRouter>
     </>

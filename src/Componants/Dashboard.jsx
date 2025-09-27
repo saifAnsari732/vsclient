@@ -16,7 +16,7 @@ import Slider from './Slider'
 import { Customheader } from './Header/Customheader'
 const Dashboard = () => {
   const navigate = useNavigate()
- 
+  
   return (
     <>
       <Customheader/>

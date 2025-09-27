@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const Aadhar = () => {
+const Aadhar = () => {
   return (
     <div>Aadhar</div>
   )
 }
+
+export default Aadhar

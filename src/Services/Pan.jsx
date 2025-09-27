@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const Pan = () => {
+const Pan = () => {
   return (
     <div>Pan</div>
   )
 }
+
+export default Pan
