@@ -75,17 +75,15 @@
 // }
 
 // export default Slider
-
-
 import React, { useState } from "react";
-import { FaArrowAltCircleLeft } from "react-icons/fa";
-import { FaArrowAltCircleRight } from "react-icons/fa";
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import photost from './slider-img/photo-st.png';
 import printer from './slider-img/printer.png';
 import schol from './slider-img/schol-girl.png';
 import offer from './Video/best-offer.mp4'
 import dis10 from './Video/sales.mp4'
 import dis2 from './Video/sale.mp4'
+import '../assets/Slider.css';
 
 const slides = [
   {
@@ -96,13 +94,12 @@ const slides = [
   {
     image: printer,
     title: "PDF PRINT / PHOTO COPY....",
-      video:dis2
+    video: dis2
   },
   {
     image: schol,
-    title: "Technology Time    SCHOLARSHIP",
-   
-    video:dis10
+    title: "Technology Time SCHOLARSHIP",
+    video: dis10
   }
 ];
 
@@ -118,47 +115,48 @@ const Slider = () => {
   };
 
   return (
-    <div style={{ maxWidth: 1550, margin: "0 auto", position: "relative" }}>
-      <div className=" flex justify-between bg-gradient-to-br from-[#1a7e70]  to-[#967896] lg:h-[250px] ">
-        <img
-          src={slides[current].image}
-          alt={slides[current].title}
-          className=""
-          style={{ width: "45%",objectFit:"contain",marginRight:20 }}
-        />
-        <h2 className="mt-4 mr-3 text-[23px] lg:text-4xl lg:mr-14">{slides[current].title}</h2>
-        {/* <p className="mt-4 mr-6">{slides[current].text}</p> */}
-        <button className="absolute top-22 right-30 sm:py-1 lg:top-36 lg:right-2/5  bg-orange-300 font-semibold text-[20px] px-5 rounded-4xl   ">
-        Click
-        </button>
-        <video className="h-18 w-14 rounded-full lg:h-[160px] lg:mr-11 lg:top-32 lg:rounded-4xl"  autoPlay loop muted src={slides[current].video}></video>
+    <div className="slider-container">
+      <div className="slider-content">
+        
+        {/* Image Section - Left Side */}
+        <div className="image-section ">
+          <img
+            src={slides[current].image}
+            alt={slides[current].title}
+            className="slider-image"
+          />
+        </div>
+
+        {/* Content Section - Middle */}
+        <div className="content-section">
+          <h2 className="slider-titl    mt-2.5 text-2xl">{slides[current].title}</h2>
+          <button className="action-butto bg-amber-500  py-1 px-6 rounded-4xl">
+            Click
+          </button>
+        </div>
+
+        {/* Video Section - Right Side */}
+        <div className="video-section">
+          <video 
+            className="video-element" 
+            autoPlay 
+            loop 
+            muted 
+            src={slides[current].video}
+          ></video>
+        </div>
+
       </div>
-      <button
-        style={{
-          position: "absolute",
-          left: 0,
-          top: "50%",
-          transform: "translateY(-50%)"
-        }}
-        onClick={prevSlide}
-      >
-      <FaArrowAltCircleLeft className="absolute lg:top-32 lg:left-96 top-17 left-39 text-2xl text-white"/>
+
+      {/* Navigation Arrows */}
+      <button className="nav-button prev-button" onClick={prevSlide}>
+        <FaArrowAltCircleLeft className="nav-icon" />
       </button>
-      <button
-        style={{
-          position: "absolute",
-          right: 0,
-          top: "50%",
-          transform: "translateY(-50%)"
-        }}
-        onClick={nextSlide}
-      >
-       <FaArrowAltCircleRight className="absolute lg:top-32 top-17 lg:right-80 right-48 text-2xl text-white"/>
+      <button className="nav-button next-button" onClick={nextSlide}>
+        <FaArrowAltCircleRight className="nav-icon" />
       </button>
     </div>
   );
 };
 
 export default Slider;
-
-
