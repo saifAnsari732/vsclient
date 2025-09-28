@@ -38,15 +38,15 @@ export const Banking = () => {
   };
   return (
     
-<div className="max-w-lg mx-auto relative bg-gradient-to-r from-[#27786e]  to-[#024133]">
+<div className="max-w-full h-[292px] mx-auto relative bg-gradient-to-r from-[#000101]  to-[#024133]">
   {/* <Header/> */}
   <h2 className=" bg-gradient-to-l from-purple-500 via-orange-500 to-yellow-500 text-transparent bg-clip-text text-2xl font-serif ml-20 font-black ">Offer For You</h2>
-      <div className="overflow-hidden rounded-lg ">
-        <div style={{backgroundColor:clr}} className='h-[160px]'>
+      <div className="overflow-hidden rounded-lg flex items-center justify-center">
+        <div style={{backgroundColor:clr}} className='h-[260px] w-full'>
         <img
           src={images[currentIndex]}
           alt={`Slide ${currentIndex + 1}`}
-          className="rounded-[50px] w-full h-[159px]"
+          className="rounded-[50px] w-[100%] h-[350px] text-center object-contain"
         />
         </div>
       </div>

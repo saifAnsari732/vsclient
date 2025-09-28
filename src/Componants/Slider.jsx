@@ -136,8 +136,9 @@ const naigate=useNavigate()
 
         {/* Content Section - Middle */}
         <div className="content-section">
-          <h2 className="slider-titl    mt-2.5 text-2xl text-shadow-black">{slides[current].title}</h2>
-          <button onClick={()=>naigate(slides[current].nvgt)}  className="action-butto bg-amber-500  py-1 px-6 rounded-4xl">
+          <h2 className="slider-title    mt-2.5 text-2xl text-shadow-black lg:text-6xl`">{slides[current].title}</h2>
+         <h3 className=" text-[13px] lg:text-3xl lg:text-center">Less price Limited Offer</h3>
+          <button onClick={()=>naigate(slides[current].nvgt)}  className="action-butto bg-amber-500  py-1 px-6 rounded-4xl lg:mt-11 lg:py-5 lg:px-14">
             Click
           </button>
         </div>
@@ -157,7 +158,7 @@ const naigate=useNavigate()
 
       {/* Navigation Arrows */}
       <button className="nav-button prev-button" onClick={prevSlide}>
-        <FaArrowAltCircleLeft className="nav-icon" />
+        <FaArrowAltCircleLeft className="nav-icon  " />
       </button>
       <button className="nav-button next-button" onClick={nextSlide}>
         <FaArrowAltCircleRight className="nav-icon" />
